@@ -26,17 +26,17 @@ Are you new to the game and don’t yet have anything publically available?  Not
 
 Do you just love geeking out on data and want to do a mashup for fun?  We won’t stop you from doing that, either!  Want to mod something the city offers today?  Cool by us.  If you want to go one of these routes, here are some links to get you started:
 
-* Asheville’s open data site with useful APIs:	
-http://data.ashevillenc.gov/
+* Asheville’s open data site with useful APIs:
+  * http://data.ashevillenc.gov/
 * A Development Services Department specific dataset and the beta dashboard that it feeds into:	
-http://data.ashevillenc.gov/datasets?q=sla 
-http://simplicity2.ashevillenc.gov/development/sla-dashboard
+  * http://data.ashevillenc.gov/datasets?q=sla 
+  * http://simplicity2.ashevillenc.gov/development/sla-dashboard
 * Another Development Services Department dashboard site - work in progress:
-http://citygovapp.com/asheville_analytics/permits/view_permits.htm
+  * http://citygovapp.com/asheville_analytics/permits/view_permits.htm
 * Asheville’s shiny, new, go-to dashboards:
-http://dashboards.ashevillenc.gov/capital_projects  
-http://dashboards.ashevillenc.gov/budget
-http://dashboards.ashevillenc.gov/homelessness
+  * http://dashboards.ashevillenc.gov/capital_projects  
+  * http://dashboards.ashevillenc.gov/budget
+  * http://dashboards.ashevillenc.gov/homelessness
 
 ## Rules
 
@@ -47,4 +47,4 @@ http://dashboards.ashevillenc.gov/homelessness
 
 * Portfolio or Demo project
 
-We’re all about efficiency here, and your time is valuable.  You decide the best way to convey your skills to us, and we look forward to being dazzled by you.
+We’re all about efficiency here, and your time is valuable.  You decide the best way to convey your skills to us, and we look forward to being dazzled by you!
