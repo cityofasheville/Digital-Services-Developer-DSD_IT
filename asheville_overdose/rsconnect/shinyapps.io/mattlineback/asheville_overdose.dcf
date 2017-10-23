@@ -1,0 +1,12 @@
+name: asheville_overdose
+title: asheville_overdose
+username:
+account: mattlineback
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 227438
+bundleId: 1037611
+url: https://mattlineback.shinyapps.io/asheville_overdose/
+when: 1508561289.57374
+asMultiple: FALSE
+asStatic: FALSE
