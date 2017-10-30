@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-extension.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- Normal navigation here -->
+  <nav class="navbar navbar-default navbar-fixed-top"></nav>
+<main>
+  <div class="container">
+    <div class="row header-row">
+      <div class="col-sm-12">
+        <div class="h1">
+          <h1>Public Art Asheville</h1><h3>A quick overview of all data on <a href="http://data.ashevillenc.gov/datasets/78096ab7dcc745719ce6e4bd55122e62_0">public art</a> from open data API</h3>
+        </div>
+      </div>
+    </div><!---/row -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="references">
+          <div class="toggleView">
+            <span class="docNum">Total <span class="itemTotal">0</span> Documents</span>
+          </div>
+          <div class="treeContainer row">
+            <div class="col-sm-5">
+              <div class="tree-column treeColumn1 tree">
+                <span id="fileTreeLabel">
+                  Public Art Sorted by Type then Artist
+                </span>
+                <ul id="parentFolder">
+                </ul>
+              </div>
+            </div><!--/col-sm-5 -->
+            <div class="col-sm-7">
+              <div class="tree-column treeColumn2">
+                <table class="artData">
+                  <tr class="ui-row-ltr alt-rows-class">
+                    <th>Name:</th>
+                    <td class="artName"></td>
+                  </tr>
+                  <tr class="ui-row-ltr">
+                    <th>Type:</th>
+                    <td class="artType"></td>
+                  </tr>
+                  <tr class="ui-row-ltr  alt-rows-class">
+                    <th>Artist:</th>
+                    <td class="artArtist"></td>
+                  </tr>
+                  <tr class="ui-row-ltr">
+                    <th>On the Urban Trail:</th>
+                    <td class="artUrbanTrail"></td>
+                  </tr>
+                  <tr class="ui-row-ltr  alt-rows-class">
+                    <th>Urban Trail Station:</th>
+                    <td class="artUrbanTrailStation"></td>
+                  </tr>
+                  <tr class="ui-row-ltr">
+                    <th>Location:</th>
+                    <td class="artLocation"></td>
+                  </tr>
+                  <tr class="ui-row-ltr  alt-rows-class">
+                    <th>Photo</th>
+                    <td class="artPhoto"><img src=""></td>
+                  </tr>
+                  <tr class="ui-row-ltr map-row">
+                    <th>Map of Location:</th>
+                    <td id="artMap"></td>
+                  </tr>
+                </table>
+              </div>
+            </div><!---/col-sm -->
+          </div><!---/treeContainer-->
+      </div>
+    </div><!---/row-->
+  </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbb90ZwYxZtkXAP7BF9P1BNfB7dwrBXzk"></script>
+<script>
+  var url = "http://arcgis.ashevillenc.gov/arcgis/rest/services/Arts_Culture_History/PublicArt/MapServer//0/query";
+  var options = "?where=1%3D1&outFields=objectid,name,artist,image,edit_date,edit_by,location,type,urbantrail&outSR=4326&f=json";
+  var arrowIcon = $('<span><img src="images/arrow.svg"></span>');
+
+  function init() {
+    var artData = {};
+    var topLevelFolder = document.getElementById("parentFolder");
+
+    $.ajax(url+options, {
+      success: function(data) {
+        // now that JSON data has been returned, let's do something with it.
+        var allData = JSON.parse(data);
+        var featureData = allData.features;
+        var featureArray = [];
+        var artistData = {};
+
+        // Show how many are available to get info on at the top
+        $("span.itemTotal").text(featureData.length);
+
+        featureData.forEach(
+          // Get all of our data processed into easily usable structures; make missing information clear that it's unknown
+          function(value) {
+            value.attributes.geometry = value.geometry;
+            value.attributes.artistClass = value.attributes.artist.replace(/\s+/g, '');
+            value.attributes.artistClass = value.attributes.artistClass == "" ? "Unknown" : value.attributes.artistClass;
+
+            // start sorting data points into categories
+            var artistName = value.attributes.artist;
+            if (!artistData.hasOwnProperty[artistName]) {
+              artistData[artistName] = [];
+            }
+            artistData[artistName].push(value);
+
+            var type = value.attributes.type;
+            if (featureArray.indexOf(type) == -1) {
+              featureArray.push(type);
+            }
+          }
+        );
+
+        featureArray.sort();
+        featureArray.forEach(function(feature) {
+          // set up the first dropdown for each feature.
+            var featureItem = $('<li class="folderItem open" id="'+feature+'"><span><img src="images/arrow.svg">' + feature + '</span><ul class="artists folder"></ul></li>');
+            $(topLevelFolder).append(featureItem);
+            $('#'+feature + ' span').click(function() {
+              $(this).toggleClass('openFolder');
+              var children = $(this).parent('li.folderItem').find(' > ul.folder > li.folderItem');
+              $(children).toggleClass("open");
+            });
+        });
+
+        featureData.forEach(function (dataPoint) {
+          // each data point, if the artist doesn't have a li element, add it
+          var currentDataPoint = dataPoint.attributes
+          var currentFeature = '#'+currentDataPoint.type+' .artists'
+          if ($(currentFeature).children().length == 0) {
+            var artistName = currentDataPoint.artist.replace(/\s+/g, '') == '' ? "Unknown" : currentDataPoint.artist;
+            artistList = $('<li class="folderItem '+ currentDataPoint.artistClass +'"><span><img src="images/arrow.svg">'+artistName+'</span><ul class="artworkFolder folder"></ul></li>');
+            $('#'+currentDataPoint.type + ' .artists').append(artistList);
+
+            // set up click function to open up each data folder
+            $('#'+currentDataPoint.type + ' .' + currentDataPoint.artistClass + ' span').click(function() {
+              $(this).toggleClass('openFolder');
+              var children = $(this).parent('li.folderItem').find(' > ul.folder > li.folderItem');
+              $(children).toggleClass("open");
+            });
+          }
+
+          // now add the data point into the DOM here
+          var dataPointItem = $('<li class="artPiece folderItem" id="'+currentDataPoint.objectid+'"><span>'+currentDataPoint.name+'</span></li>')
+          dataPointItem.data(currentDataPoint);
+          $(currentFeature + ' .artworkFolder').append(dataPointItem);
+          dataPointItem.on("click", function(e){
+            openDataPoint(dataPointItem);
+          })
+        })
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+          alert(textStatus + ': ' + errorThrown);
+      }
+    });
+  }
+
+    function openDataPoint(dataElement) {
+      // Make sure the dataElement has data assigned, then give all the fields their proper data
+      if ($(dataElement.data())) {
+        var data = dataElement.data();
+        $(".artName").text(data.name);
+        $(".artType").text(data.type);
+        if (data.artist == '' || data.artist == ' ') {
+          $(".artArtist").text("Unknown");
+        } else {
+          $(".artArtist").text(data.artist);
+        }
+        $(".artUrbanTrail").text(data.urbantrail);
+        if (data.UT_station = '') {
+          $(".artUrbanTrailStation").text("N/A");
+        } else {
+          $(".artUrbanTrailStation").text(data.UT_station);
+        }
+        $(".artLocation").text(data.location);
+
+        if (data.image == '' || data.image == ' ') {
+          $('.artPhoto').text("No Image Available");
+        } else {
+          $(".artPhoto img").attr("src", data.image);
+        }
+        initArtMap(data.geometry.y, data.geometry.x);
+      }
+      // make the information visible
+      if ($(".artData").is(":hidden")) {
+        $(".artData").show("slide", 500);
+      }
+    }
+
+  function initArtMap(a, b) {
+      // time to initialize the map
+      var location = {lat: a, lng: b};
+      var map = new google.maps.Map(document.getElementById('artMap'), {
+        zoom: 19,
+        center: location
+      });
+      // set marker at art location
+      var marker = new google.maps.Marker({
+        position: {lat: a, lng: b},
+        map: map
+      });
+
+  }
+
+  $( document ).ready(function() {
+      init();
+  });
+
+</script>
+</body>

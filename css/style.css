@@ -1,0 +1,556 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*                              *\
+      Project Base Styles
+\*                              */
+html {
+  font-size: 16px;
+  height: 100%; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  line-height: 1;
+  color: #2f3a41;
+  background: white;
+  font-family: 'Lato', Helvetica, sans-serif;
+  height: 100%;
+  width: 100%; }
+
+p {
+  margin: 0; }
+
+i {
+  font-style: italic;
+  color: #aaf0ff; }
+
+a {
+  color: #6189a3;
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+strong {
+  font-weight: 700; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.flex-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Tienne', serif; }
+
+h1 {
+  font-size: 2em;
+  font-size: 3vw; }
+
+h2 {
+  font-size: 1.5em;
+  font-size: 2.4vw; }
+
+h3 {
+  font-size: 1.2em;
+  font-size: 2vw; }
+
+h4 {
+  font-size: 1em;
+  font-size: 1.6vw; }
+
+h5 {
+  font-size: .83em;
+  font-size: 1.2vw; }
+
+/*                              *\
+        Navigation
+\*                              */
+nav {
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.9);
+  color: #6189a3;
+  font-family: 'Lato', serif;
+  font-weight: 700;
+  left: 0;
+  height: 4em;
+  padding-top: .2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+
+.nav-inPage {
+  margin-top: 1em;
+  text-align: center; }
+
+.nav-inPage li {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-right: 1.5em; }
+
+.nav-social {
+  float: right;
+  padding: 0 0;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+  top: .6em;
+  width: 30%; }
+
+.nav-social li {
+  display: inline-block;
+  margin-right: .5em; }
+  .nav-social li:last-child {
+    margin-right: 0; }
+
+.nav-social li img {
+  max-width: 2.5em;
+  width: 100%; }
+
+/*                              *\
+      Media Queries for Nav
+\*                              */
+@media screen and (min-width: 87em) {
+  .nav-social {
+    width: 20%; } }
+@media screen and (max-width: 50em) {
+  .nav-social {
+    right: 0;
+    width: 20%; }
+
+  .nav-social li {
+    margin-right: 0em; }
+    .nav-social li:last-child {
+      margin-right: .2em; }
+    .nav-social li img {
+      max-width: 2em; } }
+@media screen and (orientation: landscape) and (max-width: 37.5em) {
+  .nav-social {
+    display: none; } }
+@media screen and (max-width: 25em) {
+  .nav-inPage li {
+    font-size: 1rem;
+    margin-right: .5em; }
+
+  .nav-social {
+    display: none; } }
+/*                              *\
+      Introduction Section
+\*                              */
+.introduction {
+  background-color: #f1feff;
+  background-image: url(../images/background-city-bottom.png);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  width: 100%; }
+
+.me {
+  display: block;
+  margin: auto;
+  max-height: 200px;
+  max-width: 200px; }
+
+.myHello {
+  line-height: 1.6;
+  margin: 1em auto 0;
+  width: 60%; }
+
+.myHello h1 {
+  font-size: 3vw;
+  text-align: center; }
+
+.myHello h2 {
+  font-size: 2.4vw;
+  text-align: center; }
+
+.myHello p {
+  font-size: 1.7vw;
+  padding-left: 3em;
+  text-align: center; }
+
+@media screen and (min-width: 50em) {
+  .introduction {
+    padding-bottom: 3em; } }
+@media screen and (max-width: 50em) {
+  .myHello {
+    width: 70%; }
+
+  .myHello h1 {
+    font-size: 5.4vw; }
+
+  .myHello h2 {
+    font-size: 3.5vw; }
+
+  .myHello p {
+    font-size: 2.3vw; } }
+@media screen and (orientation: landscape) and (max-width: 37.5em) {
+  .me {
+    max-width: 160px; } }
+@media screen and (max-width: 25em) {
+  .me {
+    width: 50%; }
+
+  .myHello {
+    width: 90%; }
+
+  .myHello h1 {
+    font-size: 8vw; }
+
+  .myHello h2 {
+    font-size: 6vw; }
+
+  .myHello p {
+    font-size: 4vw;
+    padding-left: 0; } }
+/*                              *\
+    All Section's Styles
+\*                              */
+section {
+  color: white;
+  padding: 3em 0 2em; }
+
+section h2 {
+  color: white;
+  margin: 0em auto 1em;
+  position: relative;
+  text-align: center;
+  width: 20%; }
+
+section h3 {
+  color: white;
+  text-align: center; }
+
+section h2::before {
+  border-top: 3px dotted #aaf0ff;
+  border-bottom: 3px dotted #aaf0ff;
+  content: " ";
+  height: 0.5em;
+  margin: .2em;
+  position: absolute;
+  left: -6em;
+  width: 70%; }
+
+section h2::after {
+  border-top: 3px dotted #aaf0ff;
+  border-bottom: 3px dotted #aaf0ff;
+  content: " ";
+  height: 0.5em;
+  margin: .2em;
+  position: absolute;
+  right: -6em;
+  width: 70%; }
+
+/*                              *\
+    First Section:;
+\*                              */
+.section1 {
+  background-color: #698494;
+  min-height: 30%; }
+
+.services {
+  padding: 1em 0; }
+
+.projectDisplay {
+  margin: 0 auto;
+  width: 80%; }
+  .projectDisplay .projectImg {
+    display: inline-block;
+    margin: 2.5em 1em 0 0;
+    max-width: 500px;
+    width: 60%; }
+  .projectDisplay .projectDesc {
+    width: 40%; }
+
+.projectDesc {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  vertical-align: top; }
+  .projectDesc h3 {
+    margin-bottom: 0.7em;
+    font-size: 1em;
+    font-size: 1.6vw; }
+  .projectDesc p {
+    font-size: 1.4vw;
+    line-height: 1.4;
+    margin-bottom: .5em; }
+  .projectDesc span {
+    background-color: #4b6677;
+    border-radius: 2px;
+    box-shadow: 2px 4px #415c6d;
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    color: #fafaff;
+    display: inline-block;
+    margin: .5em .5em 0; }
+  .projectDesc span:hover {
+    box-shadow: 1px 2px #415c6d;
+    cursor: pointer;
+    top: 1px; }
+  .projectDesc span:active {
+    box-shadow: 0 0px #3e5c6d;
+    top: 2px; }
+
+.projectList {
+  margin: 1em auto 0;
+  padding: 1em 0;
+  width: 90%; }
+
+.project {
+  margin: 1em;
+  max-width: 300px; }
+
+.projectImg {
+  background-image: url(../images/magnifier13.svg);
+  background-position: 50% 50%;
+  background-size: 50% 50%;
+  background-repeat: no-repeat; }
+
+.project img {
+  -webkit-transition: opacity .5s ease-out .1s;
+  -moz-transition: opacity .5s ease-out .1s;
+  -o-transition: opacity .5s ease-out .1s;
+  transition: opacity .5s ease-out .1s; }
+
+.project:hover img {
+  opacity: .5; }
+
+/*                              *\
+    Second Section
+\*                              */
+.section2 {
+  background-image: url(../images/section.png);
+  background-position-y: top;
+  box-shadow: inset rgba(0, 0, 0, 0.9) 0 3px 12px 0px;
+  margin: 0;
+  padding: 3em 10% 2em; }
+
+.section2 h2 {
+  margin-bottom: 1em; }
+
+.section2 h3 {
+  margin: 1em 0; }
+
+.serviceIcon {
+  min-width: 5em;
+  margin: 0 1em 2em;
+  width: 40%; }
+  .serviceIcon svg {
+    display: block;
+    margin: auto;
+    max-width: 150px; }
+
+.section2 li {
+  list-style-type: circle;
+  margin-bottom: 0.5em;
+  margin-left: 1em; }
+
+/*                                              *\
+    Third Section - Contact Me
+\*                                              */
+.section3 {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 0; }
+
+.section3 .flex-grid {
+  margin: 0 auto;
+  width: 60%; }
+
+.section3 .flex-grid div {
+  width: 45%; }
+
+.section3 h4 {
+  line-height: 1.5;
+  margin: 1em auto;
+  text-align: center;
+  width: 60%; }
+
+#contact-form input, #contact-form textarea {
+  background-color: #fbfeff;
+  border-radius: 5px;
+  border: 2px solid #698495;
+  display: block;
+  margin: 1em auto;
+  padding: .5em;
+  width: 80%; }
+
+#contact-form span {
+  width: 40%;
+  /*float:left;*/ }
+
+input#submit-info {
+  margin-top: 1em;
+  width: 40%; }
+
+#contact-info {
+  padding-left: 10%; }
+
+#contact-info h4 {
+  font-size: 110%;
+  margin: 1em auto .5em;
+  text-align: left; }
+
+#contact-info li {
+  margin: 1em auto; }
+
+#contact-info li a {
+  color: #9bc3ff; }
+
+#contact-info svg {
+  height: 1em;
+  margin-right: 1em;
+  width: 1em; }
+
+@media screen and (min-width: 87em) {
+  .projectDesc p {
+    font-size: 1.4vw; } }
+@media screen and (max-width: 60em) {
+  section {
+    padding: 2em 0 3em; }
+
+  h2 {
+    font-size: 3.8vw; }
+    section h2 {
+      margin: 0em auto 1em;
+      width: 40%; }
+      section h2:before, section h2:after {
+        width: 50%; }
+
+  h4 {
+    font-size: 2.3vw; }
+
+  .section3 .flex-grid {
+    width: 90%; }
+
+  .projectDesc h3 {
+    font-size: 2vw; } }
+@media screen and (max-width: 50em) {
+  .projectDisplay {
+    width: 90%; }
+
+  .projectList {
+    width: 100%; }
+
+  .projectDesc p {
+    font-size: 2vw; }
+
+  #contact-info h4 {
+    font-size: 110%; } }
+@media screen and (max-width: 25em) {
+  h2 {
+    font-size: 6vw; }
+    section h2 {
+      width: 60%;
+      margin: 0 auto; }
+      section h2:before {
+        left: -2em; }
+      section h2:after {
+        right: -2em; }
+      section h2:before, section h2:after {
+        height: .2em;
+        width: 30%; }
+
+  .projectDisplay {
+    width: 100%; }
+    .projectDisplay .projectImg {
+      display: block;
+      margin: .5em auto 0;
+      width: 90%; }
+    .projectDisplay .projectDesc {
+      width: 80%; }
+
+  .projectDesc {
+    display: block;
+    margin: .5em auto; }
+    .projectDesc h3 {
+      font-size: 4.5vw; }
+    .projectDesc p {
+      font-size: 3vw; }
+
+  .projectList {
+    padding: .5em 0; }
+
+  .section2 {
+    padding: 2em 0; }
+    .section2 .flex-grid {
+      flex-flow: column nowrap; }
+    .section2 h3 {
+      font-size: 6vw; }
+    .section2 li {
+      font-size: 4vw;
+      line-height: 1.5; }
+
+  .services {
+    padding: 0; }
+
+  .serviceIcon {
+    width: 80%; }
+    .serviceIcon svg {
+      max-width: 50%; }
+    .serviceIcon ul {
+      display: block;
+      margin: 0 auto;
+      width: 60%; }
+
+  .section3 h4 {
+    font-size: 4.5vw;
+    width: 90%; }
+  .section3 .flex-grid {
+    flex-flow: column nowrap; }
+    .section3 .flex-grid div {
+      display: block;
+      margin: auto;
+      width: 90%; }
+  .section3 p {
+    font-size: 4vw; } }
+
+/*# sourceMappingURL=style.css.map */
