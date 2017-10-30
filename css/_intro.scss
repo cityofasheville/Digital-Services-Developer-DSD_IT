@@ -1,0 +1,76 @@
+/*                              *\
+      Introduction Section
+\*                              */
+
+.introduction {
+  background-color: rgb(241,254,255);
+  background-image: url(../images/background-city-bottom.png);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  // max-height:80%;
+  padding-top:5em;
+  padding-bottom: 1em;
+  width:100%;
+}
+
+.me {
+  display:block;
+  margin:auto;
+  max-height:200px;
+  max-width:200px;
+}
+
+.myHello {
+  line-height:1.6;
+  margin: 1em auto 0;
+  width:60%;
+}
+.myHello h1 {
+  font-size:3vw;
+  text-align:center;
+}
+.myHello h2 {
+  font-size:2.4vw;
+  text-align:center;
+}
+.myHello p {
+  font-size:1.7vw;
+  padding-left:3em;
+  text-align:center;
+}
+@media screen and (min-width: 50em) {
+  .introduction {
+    padding-bottom: 3em;
+  }
+}
+@media screen and (max-width:50em) {
+  .nav-social { }
+  .myHello { width:70%; }
+  .myHello h1 {
+    font-size: 5.4vw;
+  }
+  .myHello h2 {
+    font-size: 3.5vw;
+  }
+  .myHello p {
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 37.5em) {
+  .me {max-width:160px;}
+}
+@media screen and (max-width:25em) {
+  .me {width:50%;}
+  .myHello {width:90%;}
+  .myHello h1 {
+    font-size: 8vw;
+  }
+  .myHello h2 {
+    font-size: 6vw;
+  }
+  .myHello p {
+    font-size: 4vw;
+    padding-left: 0;
+  }
+}

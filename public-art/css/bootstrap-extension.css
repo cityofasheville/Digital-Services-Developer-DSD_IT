@@ -1,0 +1,215 @@
+#references ul {
+  margin: 0;
+}
+#references {
+  background-color: rgb(246, 252, 255);
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+#references .treeColumn1 {
+  overflow: scroll;
+}
+
+#references .treeColumn1 li {
+  list-style-type: none;
+  margin: 0 0 0 15px;
+  padding: 5px 0 0;
+  position: relative;
+}
+
+#references .treeColumn1 .glyph {
+  margin-right: 8px;
+  margin-top: -3px;
+}
+
+#references .treeColumn1 li.parent_li > span:hover,
+#references .treeColumn1 li.parent_li > span:hover + ul li span {
+  background: #eeeeee;
+  border: 1px solid #e8e8e8;
+  color: #000;
+}
+
+#references .tree-column {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  margin: 0 0 10px;
+  height: 456px;
+  padding: 0;
+}
+
+#references .artData {
+  display: none;
+  font-size: 12px;
+  width: 100%;
+}
+
+#references .artData .ui-row-ltr {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 27px;
+  border: 0;
+}
+
+#references .artData .ui-row-ltr.alt-rows-class {
+  background-color: rgb(246, 252, 255);
+}
+
+#references .artData .ui-row-ltr th {
+  padding: 5px;
+  text-align: right;
+  font-size: 14px;
+  color: #666666;
+  width: 25%;
+  vertical-align: top;
+}
+
+#references .artData .ui-row-ltr td {
+  border-right: 1px solid #e8e8e8;
+  padding: 5px 5px 5px 15px;
+  width: 75%;
+}
+
+#references .artData .ui-row-ltr.map-row {
+  height:300px;
+}
+
+#references .treeColumn2 {
+  overflow: auto;
+}
+
+#references .treeContainer {
+  margin-bottom: .5em;
+}
+
+#references .fileTree ul {
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
+
+#references .fileTree ul li {
+  margin-top: 0;
+}
+
+#references .fileTree .folder {
+  margin-bottom: 8px;
+}
+
+#references .fileTree .folder > div span {
+  margin: 0 0 0 2px;
+  cursor: pointer;
+}
+
+#references .fileTree .folder ~ .file,
+#references .fileTree ul .file {
+  margin-top: 3px;
+  padding-bottom: 3px !important;
+  cursor: pointer;
+}
+
+#references .fileTree li .folder span,
+#references .fileTree li span#fileTreeLabel {
+  cursor: default;
+}
+
+#references .fileTree li .file span,
+#references .fileTree li .folder > div span {
+  cursor: pointer;
+}
+
+#references .fileTree li .file:hover {
+  background-color: #f9f9f9;
+}
+
+#references .fileTree li span#fileTreeLabel:hover {
+  color: inherit;
+}
+
+#references .fileTree li span:hover {
+  color: #666666;
+}
+
+#references .fileTree li.selected, #references .fileTree li.selected:hover {
+  background-color: #b7e7f5;
+  color: #000;
+}
+
+#references .fileTree li.selected ul {
+  background-color: white;
+}
+
+#references .fileTree .parentFolder {
+  width: 100%;
+}
+
+#references .fileTree .parentFolder .folder-closed {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#references .toggleView {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#references .toggleView .docNum {
+  font-size: .9em;
+  font-weight: bold;
+  flex: 1 1 auto;
+}
+
+#references .toggleView .buttons {
+  flex: 0 1 auto;
+}
+
+#references .toggleView .glyph {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#references .submit-buttons {
+  padding: 0;
+}
+
+#references li {
+  display:none;
+}
+
+#references li.open {
+  display: list-item;
+}
+
+#references span.openFolder img {
+  transform: rotate(90deg);
+}
+
+#references .folderItem img {
+    max-height: .75rem;
+    max-width: .75rem;
+    margin-right: .5rem;
+}
+
+#references .treeColumn1 li.artPiece {
+  margin-left: 30px;
+}
+
+#parentFolder > li {
+    display: list-item;
+}
+
+.navbar {
+  min-height: 15%;
+  background-color: rgb(246, 252, 255);
+  border-bottom: 1px solid rgb(231, 234, 255);
+  padding: 1.5rem 1rem;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+a {
+  color: #292b47;
+}

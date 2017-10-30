@@ -48,3 +48,22 @@ Do you just love geeking out on data and want to do a mashup for fun?  We won’
 * Portfolio or Demo project
 
 We’re all about efficiency here, and your time is valuable.  You decide the best way to convey your skills to us, and we look forward to being dazzled by you!
+
+##
+##
+
+# ADBakke.com
+
+## Basic Info on Site ##
+This portfolio was designed and implemented in 2014 for myself to try to obtain new jobs and find freelance work.
+
+It has recently been updated (October 2017) to include some examples that use public APIs and also some small color and image changes. Not much else.
+
+Please check out the very first project (I moved this one to the front), as it utilizes some public information that I went through and pushed into a consumable format.
+
+##
+
+#### Some Warnings ####
+This does not encompass all the work that I do or have done over the last 3 years. A majority of my work has been done with a signed non disclosure agreement.
+
+I also do not yet have a section that includes my design nor art work that could actually be quite useful to an employer or client. 

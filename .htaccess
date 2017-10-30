@@ -1,0 +1,14 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^campfireretreat\.info$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.campfireretreat\.info$
+RewriteRule ^/?$ "http\:\/\/www\.campfirertreat\.com" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^gingereventsminneapolis\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.gingereventsminneapolis\.com$
+RewriteRule ^/?$ "http\:\/\/gingereventsmpls\.com" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^firetheater\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.firetheater\.com$
+RewriteRule ^/?$ "http\:\/\/unifiretheater\.com" [R=301,L]
+

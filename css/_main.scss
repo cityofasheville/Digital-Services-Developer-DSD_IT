@@ -1,0 +1,392 @@
+/*                              *\
+    All Section's Styles
+\*                              */
+
+section {
+  color: rgb(255, 255, 255);
+  padding:3em 0 2em;
+}
+
+section h2 {
+  color: rgb(255,255,255);
+  margin: 0em auto 1em;
+  position:relative;
+  text-align:center;
+  width:20%;
+}
+
+section h3 {
+  color: rgb(255,255,255);
+  text-align:center;
+}
+
+section h2::before {
+  border-top: 3px dotted rgb(170,240,255);
+  border-bottom: 3px dotted rgb(170,240,255);
+  content: " ";
+  height:0.5em;
+  margin: .2em;
+  position:absolute;
+  left:-6em;
+  width:70%;
+}
+
+section h2::after {
+  border-top: 3px dotted rgb(170,240,255);
+  border-bottom: 3px dotted rgb(170,240,255);
+  content: " ";
+  height:0.5em;
+  margin: .2em;
+  position:absolute;
+  right:-6em;
+  width:70%;
+}
+
+
+/*                              *\
+    First Section:;
+\*                              */
+
+.section1 {
+  background-color: rgb(105,132,148);
+  min-height:30%;
+}
+
+.services {
+  padding: 1em 0;
+}
+
+.projectDisplay {
+  margin:0 auto;
+  width: 80%;
+  .projectImg {
+    display:inline-block;
+    margin:2.5em 1em 0 0;
+    max-width:500px;
+    width:60%
+  }
+
+  .projectDesc {
+    width:40%;
+  }
+}
+
+.projectDesc {
+  display:inline-block;
+  position:relative;
+  top:0;
+  vertical-align:top;
+  h3 {
+    margin-bottom:0.7em;
+    font-size:1em;font-size: 1.6vw
+  }
+
+
+  p {
+    font-size: 1.4vw;
+    line-height:1.4;
+    margin-bottom:.5em;
+  }
+
+  span {
+    background-color: rgba(75,102,119,1);
+    border-radius:2px;
+    box-shadow: 2px 4px rgb(65,92,109);
+    display:block;
+    padding:0.5em;
+    position: relative;
+    color:rgb(250,250,255);
+    display:inline-block;
+    margin:.5em .5em 0;
+  }
+
+  span:hover {
+    box-shadow: 1px 2px rgb(65,92,109);
+    cursor:pointer;
+    top:1px;
+  }
+
+  span:active {
+    box-shadow: 0 0px rgb(62,92,109);
+    top:2px;
+  }
+}
+
+
+.projectList {
+  margin:1em auto 0;
+  padding: 1em 0;
+  width: 90%;
+}
+.project {
+  margin: 1em;
+  max-width:300px;
+}
+
+.projectImg {
+  background-image: url(../images/magnifier13.svg);
+  background-position: 50% 50%;
+  background-size:50% 50%;
+  background-repeat:no-repeat;
+}
+
+.project img {
+  -webkit-transition: opacity .5s ease-out .1s;
+  -moz-transition: opacity .5s ease-out .1s;
+  -o-transition: opacity .5s ease-out .1s;
+  transition: opacity .5s ease-out .1s;
+}
+
+.project:hover img {
+  opacity: .5;
+}
+
+
+/*                              *\
+    Second Section
+\*                              */
+
+.section2 {
+  background-image: url(../images/section.png);
+  background-position-y: top;
+  box-shadow: inset rgba(0,0,0,.9) 0 3px 12px 0px;
+  margin: 0;
+  padding: 3em 10% 2em;
+}
+
+.section2 h2 {
+  margin-bottom: 1em;
+}
+
+.section2 h3 {
+  margin: 1em 0;
+}
+
+.serviceIcon {
+  min-width: 5em;
+  margin: 0 1em 2em;
+  width:40%;
+  svg {
+    display:block;
+    margin: auto;
+    max-width: 150px
+  }
+}
+
+
+.section2 li {
+  list-style-type: circle;
+  margin-bottom:0.5em;
+  margin-left: 1em;
+}
+/*                                              *\
+    Third Section - Contact Me
+\*                                              */
+
+.section3 {
+  background-color:rgba(0,0,0,.8);
+  color:rgb(255,255,255);
+  margin:0;
+}
+
+.section3 .flex-grid {
+  margin:0 auto;
+  width:60%;
+}
+.section3 .flex-grid div {
+  width: 45%;
+}
+
+
+.section3 h4 {
+  line-height: 1.5;
+  margin: 1em auto;
+  text-align:center;
+  width:60%;
+}
+
+#contact-form input, #contact-form textarea {
+  background-color: rgb(251,254,255);
+  border-radius:5px;
+  border: 2px solid rgb(105,132,149);
+  display:block;
+  margin: 1em auto;
+  padding:.5em;
+  width:80%;
+}
+
+#contact-form span {
+  width: 40%;
+  /*float:left;*/
+}
+
+input#submit-info {
+  margin-top:1em;
+  width: 40%;
+}
+
+#contact-info {
+  padding-left:10%;
+}
+
+#contact-info h4 {
+  font-size: 110%;
+  margin: 1em auto .5em;
+  text-align:left;
+}
+
+#contact-info li {
+  margin:1em auto;
+}
+
+#contact-info li a {
+  color:  rgb(155,195,255);
+}
+
+#contact-info svg {
+  height:1em;
+  margin-right:1em;
+  width:1em;
+}
+
+
+
+@media screen and (min-width:87em) {
+  .projectDesc p {
+    font-size: 1.4vw;
+  }
+}
+@media screen and (max-width:60em) {
+  section {
+    padding:2em 0 3em;
+  }
+  h2 {
+    font-size: 3.8vw;
+    section & {
+      margin:0em auto 1em;
+      width:40%;
+      &:before, &:after {
+        width:50%;
+      }
+    }
+  }
+  h4 {font-size: 2.3vw;}
+  .section3 .flex-grid {
+    width:90%;
+  }
+  .projectDesc {
+    h3 {
+      font-size: 2vw;
+    }
+  }
+}
+
+@media screen and (max-width:50em) {
+  .projectDisplay {width:90%;}
+  .projectList {width:100%;}
+  .projectDesc p {
+    font-size: 2vw;
+  }
+  #contact-info h4 {
+    font-size: 110%;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  h2 {
+    font-size: 6vw;
+    section & {
+      width:60%;
+      margin: 0 auto;
+
+      &:before {
+        left: -2em;
+      }
+      &:after {
+        right: -2em;
+      }
+      &:before, &:after {
+        height:.2em;
+        width:30%;
+      }
+    }
+  }
+
+  .projectDisplay {
+    width: 100%;
+
+    .projectImg {
+      display:block;
+      margin: .5em auto 0;
+      width:90%;
+    }
+
+    .projectDesc {
+      width: 80%;
+    }
+  }
+  .projectDesc {
+    display: block;
+    margin: .5em auto;
+
+    h3 {
+      font-size: 4.5vw;
+    }
+    p {
+      font-size: 3vw;
+    }
+  }
+  .projectList {padding: .5em 0;}
+
+  .section2 {
+    padding: 2em 0;
+
+    h2 {
+      // margin-bottom:
+    }
+
+    .flex-grid {
+      flex-flow: column nowrap;
+    }
+
+    h3 {
+      font-size: 6vw;
+    }
+
+    li {
+      font-size: 4vw;
+      line-height: 1.5;
+    }
+  }
+  .services { padding: 0; }
+  .serviceIcon {
+    width:80%;
+
+    svg {
+      max-width: 50%;
+    }
+    ul {
+      display: block;
+      margin: 0 auto;
+      width:60%;
+    }
+  }
+  .section3 {
+    h4 {
+      font-size: 4.5vw;
+      width:90%;
+    }
+    .flex-grid {
+      flex-flow: column nowrap;
+
+      div {
+        display: block;
+        margin: auto;
+        width: 90%;
+      }
+    }
+    p {
+      font-size: 4vw;
+    }
+  }
+}
