@@ -1,12 +1,12 @@
 
 Thank you; I have had fun playing with your data this week. I created two projects in ReactJS.
 
-Urban Trail Asheville, NC [http://wax9.com/publicart](http://wax9.com/publicart)
+1. Urban Trail Asheville, NC [http://wax9.com/publicart](http://wax9.com/publicart)
 
 [https://github.com/bitslayer42/publicart](https://github.com/bitslayer42/publicart)
 
 
-Asheville Purchase Order Calendar [http://wax9.com/purch-ord/](http://wax9.com/purch-ord/)
+2. Asheville Purchase Order Calendar [http://wax9.com/purch-ord/](http://wax9.com/purch-ord/)
 
 [https://github.com/bitslayer42/purch-ord](https://github.com/bitslayer42/purch-ord)
 
